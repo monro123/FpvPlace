@@ -1,0 +1,176 @@
+﻿p, h1, placeholder, input {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+}
+
+.box {
+    display: flex;
+    color: red;
+    position: relative;
+    margin: 5px;
+}
+
+.content {
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+
+.me img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px rgba(0, 0, 1, 1);
+    position: relative;
+    top: 10px;
+}
+
+.content-form h1 {
+    color: #b22929;
+    font-size: 400%;
+    text-shadow: 2px 4px 8px black;
+}
+
+.content-form p {
+    color: #b22929;
+    letter-spacing: 1px;
+    line-height: 35px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-shadow: 2px 4px 8px black;
+}
+
+.content-form form {
+    position: relative;
+}
+
+    .content-form form input, form textarea {
+        position: relative;
+        width: 100%;
+        padding: 17px;
+        border: none;
+        outline: none;
+        background: #191919;
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        border-radius: 10px;
+    }
+
+.content-form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.content-form form .btn {
+    display: inline-block;
+    background: #b22929;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: ease .20s;
+    border-radius: 10px;
+    width: 105%;
+}
+
+    .content-form form .btn:hover {
+        background: #b22929;
+        transform: scale(0.9);
+    }
+
+.content-form {
+    padding-left: 60px;
+    padding-bottom: 40px;
+}
+
+.short {
+    display: flex;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    flex: 1
+}
+
+    .short input {
+        width: 42% !important;
+    }
+
+.first {
+    float: left;
+}
+
+.second {
+    left: 30px
+}
+
+.qanda, .feedback {
+    color: white;
+    padding: 0.5% 5%;
+    font-family: 'Reem Kufi', sans-serif !important;
+}
+
+.feedback {
+    position: relative;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+summary, details {
+    border-top: 0.5px solid white;
+    cursor: pointer;
+}
+
+summary, li {
+    font-size: 18px;
+}
+
+.tools {
+    font-size: 20px;
+}
+
+#bold {
+    font-size: 20px;
+}
+
+.p {
+    font-size: 18px;
+}
+
+feedback[opep] summary ~ *, details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.after {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+}

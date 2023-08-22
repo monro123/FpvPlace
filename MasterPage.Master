@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="AmitmaizusFPV.WebPages.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="../Style/MasterPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+
+</head>
+<body id="contact">
+    <section class="header">
+        <nav>
+           
+            <a href="FPVhouse.aspx"><img src="../Photos/LUST%20BUT%20NOT%20LEAST2.png" alt="drone" /></a>   
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Equipment.aspx">Equipment</a></li>
+                    <li><a href="FandQ.aspx">F&Q</a></li>
+                    <li><a href="community.aspx">community</a></li>
+                    <li><a href="Gallery.aspx">Gallery</a></li>   
+                    <% if (!(bool)Session["isSigned"]) { %>
+                        <li><a href="Login.aspx">Login</a></li>
+                    <% }  %>
+                       
+                 
+                   <% if ((bool)Session["isSigned"]) { %>  <li><a href="Qnaire.aspx">Qnaire</a></li> <% }  %>
+                    <% if ((bool)Session["Admin"]) { %>
+                        <li><a href="RealAdmin.aspx">Admin</a></li>
+                    <% } %>
+                   <% if ((bool)Session["isSigned"]) { %>  <li><a href="Profile.aspx"><%= msgg%></a></li>   <% }  %>
+                </ul> 
+            </div>
+        </nav>
+    </section>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

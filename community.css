@@ -1,0 +1,40 @@
+﻿.none {
+    color: white;
+    font-family: 'Reem Kufi', sans-serif;
+    padding: 1.5% 6%;
+    background-color: rgba(128, 128, 128, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+div > img {
+    height: 250px;
+    width: 250px;
+}
+
+div > a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+    div > a:hover {
+        color: inherit;
+    }
+
+        div > a:hover:after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+        }
+
+h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
